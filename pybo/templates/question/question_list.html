@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+
 <body>
+{% extends 'base.html' %}
+{% block content %}
 <div class="container my-3">
     <table class="table">
         <thead>
@@ -36,6 +38,13 @@
 
     </table>
 
+    <a href=
+               "{{ url_for('question.create') }}"
+       class="btn btn-primary">
+        질문 등록하기
+    </a>
+
 </div>
+{% endblock %}
 </body>
 </html>
